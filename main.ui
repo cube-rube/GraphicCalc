@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>840</width>
+    <height>554</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Графический калькулятор</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>assets/icon_calc.ico</normaloff>assets/icon_calc.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="functionEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Введите функцию</string>
+    </property>
+    <property name="cursorMoveStyle">
+     <enum>Qt::LogicalMoveStyle</enum>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="functionList">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>211</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearing">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>480</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Очистить результаты расчетов</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plotForm">
+    <property name="geometry">
+     <rect>
+      <x>229</x>
+      <y>9</y>
+      <width>502</width>
+      <height>502</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="move_left">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>40</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>←</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">movementGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="move_right">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>40</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>→</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">movementGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="move_up">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>10</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>↑</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">movementGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="move_down">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>70</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>↓</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">movementGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="magnify">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>120</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Приблизить</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">magnifierGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="shrink">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>160</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Отдалить</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">magnifierGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="help">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>10</y>
+      <width>21</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>?</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="plotImage">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>10</y>
+      <width>501</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="errorLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>840</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>Журнал</string>
+     </property>
+     <addaction name="saveInTable"/>
+     <addaction name="openFromTable"/>
+    </widget>
+    <addaction name="saveAsPng"/>
+    <addaction name="separator"/>
+    <addaction name="menu"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+    <addaction name="helpAct"/>
+    <addaction name="separator"/>
+    <addaction name="openAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionc">
+   <property name="text">
+    <string>c</string>
+   </property>
+  </action>
+  <action name="saveAsPng">
+   <property name="text">
+    <string>Сохранить окно графиков как изображение</string>
+   </property>
+  </action>
+  <action name="saveInTable">
+   <property name="text">
+    <string>Сохранить функции в журнале</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Сохранить как...</string>
+   </property>
+  </action>
+  <action name="openFromTable">
+   <property name="text">
+    <string>Открыть функции из журнала</string>
+   </property>
+  </action>
+  <action name="openAbout">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="helpAct">
+   <property name="text">
+    <string>Помощь</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="movementGroup"/>
+  <buttongroup name="magnifierGroup"/>
+ </buttongroups>
+</ui>
